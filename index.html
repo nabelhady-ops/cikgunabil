@@ -1,85 +1,115 @@
 <!DOCTYPE html>
 <html lang="ms"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Papan Pemuka – SK Contoh</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jurufoto Sekolah</title>
 <style>
-:root{--bg:#eef0f2;--card:#fff;--bd:#dfe3e8;--tx:#1f2933;--mu:#6b7785;--ac:#2f5d8a;--ok:#2e8b57;--wn:#b7791f;--er:#b5483a;--sb:#f7f8fa;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181d;--card:#1d232a;--bd:#2f3843;--tx:#e6eaee;--mu:#93a0ad;--ac:#7fb0e0;--ok:#5cc08a;--wn:#e2b04f;--er:#e68a7c;--sb:#191f25}}
-:root[data-theme="dark"]{--bg:#14181d;--card:#1d232a;--bd:#2f3843;--tx:#e6eaee;--mu:#93a0ad;--ac:#7fb0e0;--ok:#5cc08a;--wn:#e2b04f;--er:#e68a7c;--sb:#191f25}
-*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--tx);font:13px/1.45 "Segoe UI",system-ui,-apple-system,Arial,sans-serif}
-.scroll{overflow-x:auto}.app{min-width:1180px}
-.top{display:flex;align-items:center;gap:14px;height:52px;padding:0 20px;background:var(--card);border-bottom:1px solid var(--bd)}
-.top b{font-size:15px}.badge{background:#e6eef6;color:var(--ac);border:1px solid var(--bd);padding:2px 9px;border-radius:10px;font-size:12px}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .badge{background:#25384b}}
-.sp{flex:1}.mu{color:var(--mu)}
+:root{--bg:#eef0f2;--card:#fff;--bd:#dfe3e8;--tx:#1f2933;--mu:#6b7785;--ac:#2f5d8a;--ok:#2e8b57;--wn:#b7791f;--er:#b5483a;--sb:#f7f8fa}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.45 "Segoe UI",system-ui,Arial,sans-serif}
+.top{display:flex;align-items:center;gap:12px;min-height:52px;padding:6px 20px;background:var(--card);border-bottom:1px solid var(--bd);flex-wrap:wrap}
+.badge{background:#e6eef6;color:var(--ac);border:1px solid var(--bd);padding:2px 9px;border-radius:10px;font-size:12px}
+.sp{flex:1}.mu{color:var(--mu)}.s{font-size:12px;color:var(--mu)}
 .body{display:flex;min-height:calc(100vh - 52px)}
-nav{width:200px;background:var(--sb);border-right:1px solid var(--bd);padding:14px 10px}
-nav a{display:block;padding:8px 12px;border-radius:6px;color:var(--tx);margin-bottom:2px}
-nav a.on{background:var(--card);border:1px solid var(--bd);font-weight:600;color:var(--ac)}
+nav{width:200px;flex:none;background:var(--sb);border-right:1px solid var(--bd);padding:14px 10px}
+nav button{display:block;width:100%;text-align:left;padding:8px 12px;border:1px solid transparent;border-radius:6px;background:none;color:var(--tx);font:inherit;cursor:pointer;margin-bottom:2px}
+nav button.on{background:var(--card);border-color:var(--bd);font-weight:600;color:var(--ac)}
 main{flex:1;padding:18px 20px;min-width:0}
-h1{font-size:17px;margin:0 0 12px}
-.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:6px;padding:14px}
-.card h2{font-size:13.5px;margin:0 0 10px}
-.row{padding:9px 0;border-top:1px solid var(--bd)}.row:first-of-type{border-top:0}
-.row .t{font-weight:600}.row .s{color:var(--mu);font-size:12px}
-.st{display:inline-block;margin-top:4px;padding:1px 8px;border-radius:9px;font-size:11.5px;border:1px solid var(--bd)}
-.st.g{color:var(--ok);border-color:var(--ok)}.st.a{color:var(--wn);border-color:var(--wn)}.st.r{color:var(--er);border-color:var(--er)}.st.n{color:var(--mu)}
-a.lnk{color:var(--ac);text-decoration:underline}
-.note{margin-top:10px;font-size:12px;color:var(--mu);background:var(--sb);border:1px solid var(--bd);border-radius:4px;padding:6px 8px}
-.ck{display:flex;gap:8px;align-items:center;padding:6px 0}
-.ck i{width:16px;height:16px;border-radius:3px;display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-size:11px;color:#fff;flex:none}
-.ck .y{background:var(--ok)}.ck .n{background:var(--bd);color:var(--mu)}
-.warn{margin:14px 0;padding:9px 12px;border:1px solid var(--wn);border-radius:6px;background:rgba(183,121,31,.1);display:flex;gap:10px;align-items:center}
-.bl{display:inline-block;background:var(--mu);opacity:.45;filter:blur(4px);border-radius:3px;height:12px;width:70px;vertical-align:middle;margin-left:4px}
-.fb{display:grid;grid-template-columns:1fr 280px;gap:14px}
-.path{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;background:var(--sb);border:1px solid var(--bd);border-radius:4px;padding:6px 9px;margin-bottom:10px}
-.files{display:flex;gap:10px;flex-wrap:wrap}
-.f{width:130px;border:1px solid var(--bd);border-radius:4px;overflow:hidden;font-size:11.5px}
-.f div{height:70px;background:linear-gradient(135deg,#cfd6dd,#e4e8ec)}.f span{display:block;padding:5px 7px;word-break:break-all}
-input{width:100%;padding:7px 9px;border:1px solid var(--bd);border-radius:4px;background:var(--card);color:var(--tx);font:inherit}
-.res{margin-top:10px;padding:8px;border:1px solid var(--ac);border-radius:4px}
-footer{margin-top:14px;padding:9px 0;border-top:1px solid var(--bd);color:var(--mu);font-size:12px;text-align:center}
+h1{font-size:18px;margin:0 0 12px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:6px;padding:14px;margin-bottom:14px}
+.grid .card{margin-bottom:0}
+.card h2{font-size:14px;margin:0 0 8px}
+.row{padding:8px 0;border-top:1px solid var(--bd);display:flex;gap:8px;align-items:flex-start}
+.row:first-of-type{border-top:0}.row>div{flex:1;min-width:0}.t{font-weight:600}
+.st{display:inline-block;padding:1px 8px;border-radius:9px;font-size:12px;border:1px solid var(--bd);color:var(--mu)}
+.st.g{color:var(--ok);border-color:var(--ok)}.st.a{color:var(--wn);border-color:var(--wn)}.st.r{color:var(--er);border-color:var(--er)}
+input,select,button.b{font:inherit;padding:6px 9px;border:1px solid var(--bd);border-radius:4px;background:#fff;color:var(--tx)}
+button.b{cursor:pointer;background:var(--ac);color:#fff;border-color:var(--ac)}
+button.b.g{background:#fff;color:var(--tx);border-color:var(--bd)}
+button.x{border:0;background:none;color:var(--er);cursor:pointer;font-size:16px}
+form.f{display:flex;gap:8px;flex-wrap:wrap;align-items:end;margin-bottom:12px}
+form.f label{display:flex;flex-direction:column;font-size:12px;color:var(--mu);gap:2px}
+.note{margin-top:8px;font-size:12px;color:var(--mu);background:var(--sb);border:1px solid var(--bd);border-radius:4px;padding:6px 8px}
+.ck{display:flex;gap:8px;align-items:center;padding:6px 0;cursor:pointer}
+.ck i{width:18px;height:18px;border-radius:3px;display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-size:12px;color:#fff;background:var(--bd);flex:none}
+.ck.y i{background:var(--ok)}
+.warn{margin:0 0 14px;padding:9px 12px;border:1px solid var(--wn);border-radius:6px;background:#fbf3e4}
+.bl{filter:blur(4px);cursor:pointer;user-select:none}.bl.show{filter:none}
+.path{font-family:ui-monospace,Consolas,monospace;font-size:12px;background:var(--sb);border:1px solid var(--bd);border-radius:4px;padding:6px 9px;margin-bottom:8px;word-break:break-all}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal .h{font-size:12px;color:var(--mu);text-align:center}
+.cal .c{min-height:70px;background:var(--card);border:1px solid var(--bd);border-radius:4px;padding:4px;font-size:12px}
+.cal .c.td{border-color:var(--ac)}.cal .c.o{background:var(--sb)}
+.cal .e{background:#e6eef6;border-radius:3px;padding:1px 4px;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cal .e.r{background:#f6e3df}
+.scroll{overflow-x:auto}
+footer{margin-top:10px;padding:10px 0;border-top:1px solid var(--bd);color:var(--mu);font-size:12px;text-align:center}
+@media (max-width:860px){.body{flex-direction:column}nav{width:100%;display:flex;flex-wrap:wrap;gap:4px}nav button{width:auto}.grid{grid-template-columns:1fr}}
 </style></head><body>
-<div class="scroll"><div class="app">
-<header class="top"><b>SK Contoh</b><span class="badge">Jurufoto Sekolah</span><span class="sp"></span><span class="mu">Isnin, 5 Oktober 2026</span></header>
-<div class="body">
-<nav><a class="on">Papan Pemuka</a><a>Tempahan Rakaman</a><a>Kalendar</a><a>Foto &amp; Folder</a><a>Kad Murid</a><a>Set Wajib Tahunan</a><a>Hantaran</a><a>Kebenaran Media</a></nav>
-<main>
-<h1>Papan Pemuka</h1>
-<div class="grid">
-<section class="card"><h2>Tempahan minggu ini</h2>
-<div class="row"><div class="t">Hari Sukan Tahunan</div><div class="s">6 Okt, 8.00 pagi · Padang sekolah</div><span class="st n">Belum dirakam</span></div>
-<div class="row"><div class="t">Foto kelas</div><div class="s">7 Okt, 10.30 pagi · Bilik darjah 4 Amanah</div><span class="st g">Disahkan</span></div>
-<div class="row"><div class="t">Hari Anugerah</div><div class="s">8 Okt, 2.00 petang · Dewan</div><span class="st r">Bertindih — semak masa</span></div>
-</section>
-<section class="card"><h2>Status hantaran</h2>
-<div class="row"><div class="t">Foto kelas 5 Bestari</div><span class="st a">Sedang pilih</span></div>
-<div class="row"><div class="t">Lawatan muzium Tingkatan 2</div><span class="st g">Sudah hantar</span> <a class="lnk" href="#" onclick="return false">Pautan Drive</a></div>
-<div class="row"><div class="t">Kad murid 1 Arif</div><span class="st n">Belum muat naik</span></div>
-<div class="note">Guru hanya nampak folder sendiri.</div>
-</section>
-<section class="card"><h2>Set wajib 2026</h2>
-<div class="ck"><i class="y">✓</i>Foto kelas dan guru kelas</div>
-<div class="ck"><i class="y">✓</i>Kad murid</div>
-<div class="ck"><i class="n">✓</i>Kad staf</div>
-<div class="ck"><i class="y">✓</i>Perhimpunan rasmi</div>
-<div class="ck"><i class="n">✓</i>Hari Anugerah</div>
-<div class="ck"><i class="n">✓</i>Graduasi</div>
-<div class="ck"><i class="y">✓</i>Lawatan berSurat</div>
-<div class="ck"><i class="n">✓</i>Sudut sekolah untuk buletin</div>
-</section>
-</div>
-<div class="warn"><b>⚠</b><span>3 murid tidak dibenarkan untuk media sosial <span class="bl"></span><span class="bl"></span><span class="bl"></span></span></div>
-<section class="card"><h2>Folder automatik</h2>
-<div class="fb"><div>
-<div class="path">2026 / 03 / sukan-tahunan / tingkatan-4-amanah /</div>
-<div class="files"><div class="f"><div></div><span>ali-bin-abu.jpg</span></div><div class="f"><div></div><span>siti-binti-omar.jpg</span></div><div class="f"><div></div><span>guru-kelas.jpg</span></div></div>
-</div><div>
-<input value="Ali 4 Amanah" aria-label="Cari">
-<div class="res"><b>ali-bin-abu.jpg</b><div class="s mu">…/tingkatan-4-amanah/ · 1 hasil</div></div>
-</div></div></section>
-<footer>Asal fail di Drive sekolah · salinan telefon dipadam selepas hantar</footer>
-</main></div></div></div>
-</body></html>
+<header class="top"><b>SK Contoh</b><span class="badge">Jurufoto Sekolah</span><span class="sp"></span><span class="mu" id="tarikh"></span></header>
+<div class="body"><nav id="nav"></nav><main id="main"></main></div>
+<script>
+const KEY="jurufoto_v1",V=["Papan Pemuka","Tempahan Rakaman","Kalendar","Foto & Folder","Kad Murid","Set Wajib Tahunan","Hantaran","Kebenaran Media"];
+const SEED=()=>({
+b:[{id:1,d:"2026-10-06",t:"08:00",l:"Padang sekolah",e:"Hari Sukan Tahunan",s:"Belum dirakam"},{id:2,d:"2026-10-07",t:"10:30",l:"Bilik darjah 4 Amanah",e:"Foto kelas",s:"Disahkan"},{id:3,d:"2026-10-08",t:"14:00",l:"Dewan",e:"Hari Anugerah",s:"Disahkan"},{id:4,d:"2026-10-08",t:"14:30",l:"Dewan",e:"Rakaman bahagian guru",s:"Disahkan"}],
+h:[{id:1,n:"Foto kelas 5 Bestari",s:"Sedang pilih",link:""},{id:2,n:"Lawatan muzium Tingkatan 2",s:"Sudah hantar",link:"https://drive.google.com/"},{id:3,n:"Kad murid 1 Arif",s:"Belum muat naik",link:""}],
+w:[["Foto kelas dan guru kelas",1],["Kad murid",1],["Kad staf",0],["Perhimpunan rasmi",1],["Hari Anugerah",0],["Graduasi",0],["Lawatan berSurat",1],["Sudut sekolah untuk buletin",0]].map(x=>({n:x[0],ok:!!x[1]})),
+m:[{id:1,n:"Ali bin Abu",k:"Tingkatan 4 Amanah",ok:true,kad:true},{id:2,n:"Siti binti Omar",k:"Tingkatan 4 Amanah",ok:true,kad:true},{id:3,n:"Arif bin Hasan",k:"Tahun 1 Arif",ok:true,kad:false},{id:4,n:"Murid Contoh A",k:"Tahun 3 Bestari",ok:false,kad:true},{id:5,n:"Murid Contoh B",k:"Tahun 5 Bestari",ok:false,kad:false},{id:6,n:"Murid Contoh C",k:"Tingkatan 2 Cekap",ok:false,kad:true}],
+f:["ali-bin-abu.jpg","siti-binti-omar.jpg","guru-kelas.jpg"].map(n=>({p:"2026/03/sukan-tahunan/tingkatan-4-amanah/",n}))});
+let S;try{S=JSON.parse(localStorage.getItem(KEY))||SEED()}catch(e){S=SEED()}
+let view=0,cal={y:2026,m:9},q="",gen="",revealed=false;
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const slug=s=>s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9.]+/g,"-").replace(/^-+|-+$/g,"");
+const BLN=["Januari","Februari","Mac","April","Mei","Jun","Julai","Ogos","September","Oktober","November","Disember"],HARI=["Ahad","Isnin","Selasa","Rabu","Khamis","Jumaat","Sabtu"];
+const nid=a=>a.reduce((m,x)=>Math.max(m,x.id),0)+1;
+const tm=t=>{let[h,m]=t.split(":").map(Number);return(h%12||12)+"."+String(m).padStart(2,"0")+(h<12?" pagi":h<15?" tengah hari":" petang")};
+const dm=d=>{let x=d.split("-");return+x[2]+" "+BLN[+x[1]-1].slice(0,3)};
+const mins=t=>{let[h,m]=t.split(":").map(Number);return h*60+m};
+const clash=b=>S.b.some(o=>o.id!==b.id&&o.d===b.d&&Math.abs(mins(o.t)-mins(b.t))<60);
+const stc=s=>/Disahkan|Sudah/.test(s)?"g":/pilih/.test(s)?"a":"";
+const bstat=b=>clash(b)?'<span class="st r">Bertindih — semak masa</span>':`<span class="st ${stc(b.s)}">${esc(b.s)}</span>`;
+const sel=(act,id,opts,cur)=>`<select data-c="${act}" data-id="${id}">${opts.map(o=>`<option${o===cur?" selected":""}>${o}</option>`).join("")}</select>`;
+const BS=["Belum dirakam","Disahkan","Sudah dirakam"],HS=["Belum muat naik","Sedang pilih","Sudah hantar"];
+function find(){const t=q.toLowerCase().split(/\s+/).filter(Boolean);return t.length?S.f.filter(f=>{const h=(f.p+f.n).toLowerCase().replace(/[-/]/g," ");return t.every(x=>h.includes(x))}):[]}
+function blocked(){return S.m.filter(m=>!m.ok)}
+const bRow=b=>`<div class="row"><div><div class="t">${esc(b.e)}</div><div class="s">${dm(b.d)}, ${tm(b.t)} · ${esc(b.l)}</div>${bstat(b)}</div></div>`;
+const hRow=h=>`<div class="row"><div><div class="t">${esc(h.n)}</div><span class="st ${stc(h.s)}">${h.s}</span> ${h.link?`<a href="${esc(h.link)}" target="_blank" rel="noopener">Pautan Drive</a>`:""}</div></div>`;
+const wRow=(w,i)=>`<div class="ck ${w.ok?"y":""}" data-a="w" data-i="${i}"><i>${w.ok?"✓":""}</i>${esc(w.n)}</div>`;
+const searchBox=()=>`<input id="q" placeholder="Cari foto, cth: Ali 4 Amanah" value="${esc(q)}" style="width:100%"><div id="res">${resHtml()}</div>`;
+function resHtml(){const r=find();return !q?"":r.length?r.map(f=>`<div class="row"><div><div class="t">${esc(f.n)}</div><div class="s">${esc(f.p)}</div></div></div>`).join(""):'<div class="s" style="padding:8px 0">Tiada hasil.</div>'}
+function pwarn(){const b=blocked();return b.length?`<div class="warn">⚠ ${b.length} murid tidak dibenarkan untuk media sosial: ${b.map(m=>`<span class="bl${revealed?" show":""}" data-a="rev">${esc(m.n)}</span>`).join(", ")} <span class="s">(klik nama untuk papar)</span></div>`:""}
+const pages=[
+()=>`${pwarn()}<div class="grid"><section class="card"><h2>Tempahan minggu ini</h2>${[...S.b].sort((a,b)=>(a.d+a.t).localeCompare(b.d+b.t)).map(bRow).join("")||'<div class="s">Tiada tempahan.</div>'}</section><section class="card"><h2>Status hantaran</h2>${S.h.map(hRow).join("")}<div class="note">Guru hanya nampak folder sendiri.</div></section><section class="card"><h2>Set wajib 2026</h2>${S.w.map(wRow).join("")}</section></div><section class="card" style="margin-top:14px"><h2>Folder automatik</h2>${searchBox()}</section>`,
+()=>`<section class="card"><h2>Tambah tempahan</h2><form class="f" data-f="b"><label>Tarikh<input type="date" name="d" required></label><label>Masa<input type="time" name="t" required></label><label>Lokasi<input name="l" required></label><label>Acara<input name="e" required></label><button class="b">Simpan</button></form></section><section class="card"><h2>Senarai tempahan</h2>${[...S.b].sort((a,b)=>(a.d+a.t).localeCompare(b.d+b.t)).map(b=>`<div class="row"><div><div class="t">${esc(b.e)}</div><div class="s">${dm(b.d)}, ${tm(b.t)} · ${esc(b.l)}</div>${bstat(b)}</div>${sel("bs",b.id,BS,b.s)}<button class="x" data-a="bd" data-id="${b.id}" title="Padam">×</button></div>`).join("")}</section>`,
+()=>{const f=new Date(cal.y,cal.m,1),n=new Date(cal.y,cal.m+1,0).getDate(),today=new Date().toISOString().slice(0,10);let c=HARI.map(h=>`<div class="h">${h.slice(0,3)}</div>`).join("");for(let i=0;i<f.getDay();i++)c+='<div class="c o"></div>';for(let d=1;d<=n;d++){const ds=`${cal.y}-${String(cal.m+1).padStart(2,"0")}-${String(d).padStart(2,"0")}`;c+=`<div class="c ${ds===today?"td":""}">${d}${S.b.filter(b=>b.d===ds).map(b=>`<div class="e ${clash(b)?"r":""}" title="${esc(b.e)}">${tm(b.t).split(" ")[0]} ${esc(b.e)}</div>`).join("")}</div>`}return`<section class="card"><form class="f" style="align-items:center"><button type="button" class="b g" data-a="cp">‹</button><b>${BLN[cal.m]} ${cal.y}</b><button type="button" class="b g" data-a="cn">›</button></form><div class="scroll"><div class="cal" style="min-width:560px">${c}</div></div><div class="note">Kotak merah = masa bertindih dengan tempahan lain pada hari yang sama.</div></section>`},
+()=>`<section class="card"><h2>Cipta folder automatik</h2><form class="f" data-f="g"><label>Tarikh<input type="date" name="d" required></label><label>Acara<input name="e" placeholder="Sukan Tahunan" required></label><label>Kelas<input name="k" placeholder="Tingkatan 4 Amanah" required></label><label>Fail foto<input type="file" name="p" multiple accept="image/*"></label><button class="b">Cipta &amp; senarai</button></form>${gen?`<div class="path">${esc(gen)}</div>`:""}<div class="note">Hanya nama fail dicatat di sini. Foto sebenar kekal pada peranti/Drive anda.</div></section><section class="card"><h2>Cari</h2>${searchBox()}</section><section class="card"><h2>Semua folder</h2>${[...new Set(S.f.map(f=>f.p))].map(p=>`<div class="row"><div><div class="path" style="margin:0">${esc(p)}</div><div class="s">${S.f.filter(f=>f.p===p).map(f=>esc(f.n)).join(", ")}</div></div></div>`).join("")}</section>`,
+()=>`<section class="card"><h2>Tambah murid</h2><form class="f" data-f="m"><label>Nama<input name="n" required></label><label>Kelas<input name="k" required></label><button class="b">Simpan</button></form></section><section class="card"><h2>Kad murid</h2>${S.m.map(m=>`<div class="row"><div><div class="t">${esc(m.n)}</div><div class="s">${esc(m.k)}</div></div><span class="st ${m.kad?"g":""}">${m.kad?"Kad siap":"Kad belum siap"}</span><button class="b g" data-a="kad" data-id="${m.id}">Tukar</button><button class="x" data-a="md" data-id="${m.id}">×</button></div>`).join("")}</section>`,
+()=>`<section class="card"><h2>Set wajib 2026 (${S.w.filter(w=>w.ok).length}/${S.w.length} siap)</h2>${S.w.map(wRow).join("")}</section>`,
+()=>`<section class="card"><h2>Tambah hantaran</h2><form class="f" data-f="h"><label>Tajuk<input name="n" required></label><label>Pautan Drive<input name="link" type="url" placeholder="https://..."></label><button class="b">Simpan</button></form></section><section class="card"><h2>Status hantaran</h2>${S.h.map(h=>`<div class="row"><div><div class="t">${esc(h.n)}</div>${h.link?`<a href="${esc(h.link)}" target="_blank" rel="noopener">Pautan Drive</a>`:'<span class="s">Tiada pautan</span>'}</div>${sel("hs",h.id,HS,h.s)}<button class="x" data-a="hd" data-id="${h.id}">×</button></div>`).join("")}<div class="note">Guru hanya nampak folder sendiri.</div></section>`,
+()=>`${pwarn()}<section class="card"><h2>Kebenaran media sosial</h2>${S.m.map(m=>`<div class="row"><div><div class="t">${esc(m.n)}</div><div class="s">${esc(m.k)}</div></div><span class="st ${m.ok?"g":"r"}">${m.ok?"Dibenarkan":"Tidak dibenarkan"}</span><button class="b g" data-a="ok" data-id="${m.id}">Tukar</button></div>`).join("")}</section>`
+];
+function render(){document.getElementById("nav").innerHTML=V.map((v,i)=>`<button class="${i===view?"on":""}" data-a="v" data-i="${i}">${v}</button>`).join("");
+document.getElementById("main").innerHTML=`<h1>${V[view]}</h1>${pages[view]()}<footer>Data disimpan dalam pelayar ini sahaja · <a href="#" data-a="exp">Eksport sandaran</a> · <a href="#" data-a="imp">Import</a> · <a href="#" data-a="rst">Set semula</a></footer>`}
+const T=new Date();document.getElementById("tarikh").textContent=`${HARI[T.getDay()]}, ${T.getDate()} ${BLN[T.getMonth()]} ${T.getFullYear()}`;
+const by=(a,id)=>a.find(x=>x.id==id);
+document.addEventListener("click",e=>{const t=e.target.closest("[data-a]");if(!t)return;e.preventDefault();const a=t.dataset.a,id=t.dataset.id,i=t.dataset.i;
+if(a==="v")view=+i;else if(a==="w")S.w[i].ok=!S.w[i].ok;else if(a==="rev")revealed=!revealed;
+else if(a==="bd"){if(confirm("Padam tempahan ini?"))S.b=S.b.filter(x=>x.id!=id)}
+else if(a==="hd"){S.h=S.h.filter(x=>x.id!=id)}else if(a==="md"){if(confirm("Padam murid ini?"))S.m=S.m.filter(x=>x.id!=id)}
+else if(a==="kad"){const m=by(S.m,id);m.kad=!m.kad}else if(a==="ok"){const m=by(S.m,id);m.ok=!m.ok}
+else if(a==="cp"){cal.m--;if(cal.m<0){cal.m=11;cal.y--}}else if(a==="cn"){cal.m++;if(cal.m>11){cal.m=0;cal.y++}}
+else if(a==="exp"){const l=document.createElement("a");l.href=URL.createObjectURL(new Blob([JSON.stringify(S)],{type:"application/json"}));l.download="sandaran-jurufoto.json";l.click();return}
+else if(a==="imp"){const f=document.createElement("input");f.type="file";f.accept=".json";f.onchange=()=>f.files[0].text().then(x=>{try{S=JSON.parse(x);save();render()}catch(_){alert("Fail tidak sah")}});f.click();return}
+else if(a==="rst"){if(confirm("Padam semua data dan kembali ke contoh asal?"))S=SEED()}
+save();render()});
+document.addEventListener("change",e=>{const t=e.target,c=t.dataset.c;if(!c)return;if(c==="bs")by(S.b,t.dataset.id).s=t.value;if(c==="hs")by(S.h,t.dataset.id).s=t.value;save();render()});
+document.addEventListener("input",e=>{if(e.target.id==="q"){q=e.target.value;document.getElementById("res").innerHTML=resHtml()}});
+document.addEventListener("submit",e=>{const f=e.target.dataset.f;if(!f)return;e.preventDefault();const d=Object.fromEntries(new FormData(e.target));
+if(f==="b")S.b.push({id:nid(S.b),d:d.d,t:d.t,l:d.l,e:d.e,s:"Belum dirakam"});
+if(f==="h")S.h.push({id:nid(S.h),n:d.n,s:"Belum muat naik",link:d.link||""});
+if(f==="m")S.m.push({id:nid(S.m),n:d.n,k:d.k,ok:true,kad:false});
+if(f==="g"){const p=`${d.d.slice(0,4)}/${d.d.slice(5,7)}/${slug(d.e)}/${slug(d.k)}/`;gen=p;[...e.target.p.files].forEach(x=>S.f.push({p,n:slug(x.name)}))}
+save();render()});
+render();
+</script></body></html>
