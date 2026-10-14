@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Papan Pemuka – SK Contoh</title>
+<style>
+:root{--bg:#eef0f2;--card:#fff;--bd:#dfe3e8;--tx:#1f2933;--mu:#6b7785;--ac:#2f5d8a;--ok:#2e8b57;--wn:#b7791f;--er:#b5483a;--sb:#f7f8fa;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181d;--card:#1d232a;--bd:#2f3843;--tx:#e6eaee;--mu:#93a0ad;--ac:#7fb0e0;--ok:#5cc08a;--wn:#e2b04f;--er:#e68a7c;--sb:#191f25}}
+:root[data-theme="dark"]{--bg:#14181d;--card:#1d232a;--bd:#2f3843;--tx:#e6eaee;--mu:#93a0ad;--ac:#7fb0e0;--ok:#5cc08a;--wn:#e2b04f;--er:#e68a7c;--sb:#191f25}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:13px/1.45 "Segoe UI",system-ui,-apple-system,Arial,sans-serif}
+.scroll{overflow-x:auto}.app{min-width:1180px}
+.top{display:flex;align-items:center;gap:14px;height:52px;padding:0 20px;background:var(--card);border-bottom:1px solid var(--bd)}
+.top b{font-size:15px}.badge{background:#e6eef6;color:var(--ac);border:1px solid var(--bd);padding:2px 9px;border-radius:10px;font-size:12px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .badge{background:#25384b}}
+.sp{flex:1}.mu{color:var(--mu)}
+.body{display:flex;min-height:calc(100vh - 52px)}
+nav{width:200px;background:var(--sb);border-right:1px solid var(--bd);padding:14px 10px}
+nav a{display:block;padding:8px 12px;border-radius:6px;color:var(--tx);margin-bottom:2px}
+nav a.on{background:var(--card);border:1px solid var(--bd);font-weight:600;color:var(--ac)}
+main{flex:1;padding:18px 20px;min-width:0}
+h1{font-size:17px;margin:0 0 12px}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:6px;padding:14px}
+.card h2{font-size:13.5px;margin:0 0 10px}
+.row{padding:9px 0;border-top:1px solid var(--bd)}.row:first-of-type{border-top:0}
+.row .t{font-weight:600}.row .s{color:var(--mu);font-size:12px}
+.st{display:inline-block;margin-top:4px;padding:1px 8px;border-radius:9px;font-size:11.5px;border:1px solid var(--bd)}
+.st.g{color:var(--ok);border-color:var(--ok)}.st.a{color:var(--wn);border-color:var(--wn)}.st.r{color:var(--er);border-color:var(--er)}.st.n{color:var(--mu)}
+a.lnk{color:var(--ac);text-decoration:underline}
+.note{margin-top:10px;font-size:12px;color:var(--mu);background:var(--sb);border:1px solid var(--bd);border-radius:4px;padding:6px 8px}
+.ck{display:flex;gap:8px;align-items:center;padding:6px 0}
+.ck i{width:16px;height:16px;border-radius:3px;display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-size:11px;color:#fff;flex:none}
+.ck .y{background:var(--ok)}.ck .n{background:var(--bd);color:var(--mu)}
+.warn{margin:14px 0;padding:9px 12px;border:1px solid var(--wn);border-radius:6px;background:rgba(183,121,31,.1);display:flex;gap:10px;align-items:center}
+.bl{display:inline-block;background:var(--mu);opacity:.45;filter:blur(4px);border-radius:3px;height:12px;width:70px;vertical-align:middle;margin-left:4px}
+.fb{display:grid;grid-template-columns:1fr 280px;gap:14px}
+.path{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;background:var(--sb);border:1px solid var(--bd);border-radius:4px;padding:6px 9px;margin-bottom:10px}
+.files{display:flex;gap:10px;flex-wrap:wrap}
+.f{width:130px;border:1px solid var(--bd);border-radius:4px;overflow:hidden;font-size:11.5px}
+.f div{height:70px;background:linear-gradient(135deg,#cfd6dd,#e4e8ec)}.f span{display:block;padding:5px 7px;word-break:break-all}
+input{width:100%;padding:7px 9px;border:1px solid var(--bd);border-radius:4px;background:var(--card);color:var(--tx);font:inherit}
+.res{margin-top:10px;padding:8px;border:1px solid var(--ac);border-radius:4px}
+footer{margin-top:14px;padding:9px 0;border-top:1px solid var(--bd);color:var(--mu);font-size:12px;text-align:center}
+</style></head><body>
+<div class="scroll"><div class="app">
+<header class="top"><b>SK Contoh</b><span class="badge">Jurufoto Sekolah</span><span class="sp"></span><span class="mu">Isnin, 5 Oktober 2026</span></header>
+<div class="body">
+<nav><a class="on">Papan Pemuka</a><a>Tempahan Rakaman</a><a>Kalendar</a><a>Foto &amp; Folder</a><a>Kad Murid</a><a>Set Wajib Tahunan</a><a>Hantaran</a><a>Kebenaran Media</a></nav>
+<main>
+<h1>Papan Pemuka</h1>
+<div class="grid">
+<section class="card"><h2>Tempahan minggu ini</h2>
+<div class="row"><div class="t">Hari Sukan Tahunan</div><div class="s">6 Okt, 8.00 pagi · Padang sekolah</div><span class="st n">Belum dirakam</span></div>
+<div class="row"><div class="t">Foto kelas</div><div class="s">7 Okt, 10.30 pagi · Bilik darjah 4 Amanah</div><span class="st g">Disahkan</span></div>
+<div class="row"><div class="t">Hari Anugerah</div><div class="s">8 Okt, 2.00 petang · Dewan</div><span class="st r">Bertindih — semak masa</span></div>
+</section>
+<section class="card"><h2>Status hantaran</h2>
+<div class="row"><div class="t">Foto kelas 5 Bestari</div><span class="st a">Sedang pilih</span></div>
+<div class="row"><div class="t">Lawatan muzium Tingkatan 2</div><span class="st g">Sudah hantar</span> <a class="lnk" href="#" onclick="return false">Pautan Drive</a></div>
+<div class="row"><div class="t">Kad murid 1 Arif</div><span class="st n">Belum muat naik</span></div>
+<div class="note">Guru hanya nampak folder sendiri.</div>
+</section>
+<section class="card"><h2>Set wajib 2026</h2>
+<div class="ck"><i class="y">✓</i>Foto kelas dan guru kelas</div>
+<div class="ck"><i class="y">✓</i>Kad murid</div>
+<div class="ck"><i class="n">✓</i>Kad staf</div>
+<div class="ck"><i class="y">✓</i>Perhimpunan rasmi</div>
+<div class="ck"><i class="n">✓</i>Hari Anugerah</div>
+<div class="ck"><i class="n">✓</i>Graduasi</div>
+<div class="ck"><i class="y">✓</i>Lawatan berSurat</div>
+<div class="ck"><i class="n">✓</i>Sudut sekolah untuk buletin</div>
+</section>
+</div>
+<div class="warn"><b>⚠</b><span>3 murid tidak dibenarkan untuk media sosial <span class="bl"></span><span class="bl"></span><span class="bl"></span></span></div>
+<section class="card"><h2>Folder automatik</h2>
+<div class="fb"><div>
+<div class="path">2026 / 03 / sukan-tahunan / tingkatan-4-amanah /</div>
+<div class="files"><div class="f"><div></div><span>ali-bin-abu.jpg</span></div><div class="f"><div></div><span>siti-binti-omar.jpg</span></div><div class="f"><div></div><span>guru-kelas.jpg</span></div></div>
+</div><div>
+<input value="Ali 4 Amanah" aria-label="Cari">
+<div class="res"><b>ali-bin-abu.jpg</b><div class="s mu">…/tingkatan-4-amanah/ · 1 hasil</div></div>
+</div></div></section>
+<footer>Asal fail di Drive sekolah · salinan telefon dipadam selepas hantar</footer>
+</main></div></div></div>
+</body></html>
